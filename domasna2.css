@@ -1,0 +1,39 @@
+legend        { font-style: italic;
+                color: rgb(68, 60, 152);
+                font-weight: 700;
+                font-size: larger; }
+
+fieldset      { border-color:rgb(68, 60, 152); 
+                background-color: rgb(250, 250, 250); }
+
+h1            { color:rgb(68, 60, 152);
+                position: relative;
+                -webkit-transition: 1s ease-in-out;
+                -moz-transition: 1s ease-in-out;
+                -o-transition: 1s ease-in-out;
+                transition: 1s ease-in-out; } 
+
+h1:hover      { -webkit-transform: translate(15em,0);
+                -moz-transform: translate(15em,0);
+                -o-transform: translate(15em,0);
+                -ms-transform: translate(15em,0);
+                transform: translate(15em,0); }
+
+hr            { border-top: 4px dotted rgb(68, 60, 152); }
+
+.class1p      { background-color: rgb(76, 70, 136);
+                color: white; }
+
+.class2submit { background-color: rgb(99, 90, 193);
+                color: white; } 
+
+.strong1      { color:rgb(50, 183, 139);
+                font-size: large; }
+.strong2      { color:rgb(195, 117, 34);
+                font-size: large; }
+.strong3      { color:rgb(183, 50, 50);
+                font-size: large; }
+.strong4      { color:rgb(57, 154, 169); 
+                font-size: large; } 
+.strong5      { color:rgb(183, 50, 134); 
+                font-size: large; }
