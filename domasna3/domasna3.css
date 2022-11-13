@@ -1,0 +1,49 @@
+h1     {position: absolute;
+        color: rgb(214, 168, 209);
+        right: 10%;
+        top: 1%;
+        font-family:cursive;}
+img    {margin-right: 2px;
+        height: 4%;
+        width: 4%; }
+    #strelka1{position: absolute; 
+             height: 7%;
+             width: 50%;
+             top: 24%;
+             left: 25%;}
+    #strelka2{position: absolute; 
+                height: 7%;
+                width: 50%;
+                top: 39%;
+                left: 25%;}    
+    #strelka3{position: absolute; 
+                height: 7%;
+                width: 50%;
+                top: 54%;
+                left: 25%;}
+    #strelka4{position: absolute; 
+                height: 7%;
+                width: 50%;
+                top: 69%;
+                left: 25%;}     
+p      { position: absolute;}
+    #vreme{right:10%;
+           top:10%;}
+    #p1{top: 15%;
+        left:26%;}
+    #p2{top: 30%;
+        left:26%;}
+    #p3{top: 45%;
+        left: 26%;}
+    #p4{top: 60%;
+        left: 26%;}
+    #p5{top: 75%;
+         left: 26%;}
+button  {position: absolute;
+         height: 5%;
+         width: 10%;
+         top:5%;
+         font-size: large;
+         background-color: rgb(214, 168, 209);
+         font-family:cursive;
+         left:42%;}
