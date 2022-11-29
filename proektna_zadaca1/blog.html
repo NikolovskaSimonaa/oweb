@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="mk">
+    <head>
+        <meta charset="utf-8">
+        <title>104/2020: Proektna1</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+            body            { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                	          color: rgb(77, 76, 76); }
+
+            header          {background-color:rgb(77, 76, 76);
+                            font-weight: 350;
+
+                            font-size: large;}
+            
+            header a:hover {background-color:rgb(90, 90, 90); 
+                            color: #ffffff;
+                            text-decoration: none;} 
+            a              {text-decoration: none;
+                            color: #ffffff;
+                            z-index: 3;
+
+                            display: inline-block;
+                            text-align: center;
+                            padding: 10px 12px;}
+                #zavotekst {border-bottom:none;
+                            color:#5151b5;}
+
+            #pozadina       { position:absolute;
+                              top:6.5%;
+                              left:12.5%;
+                              z-index: 1;
+                              width:75%;
+                              height: 60%;
+                              }
+                #slika1     { left:10.5%; }
+                #slika2     { left:36.5%; }
+                #slika3     { left:64.5%; }
+
+
+            p               { font-size: large;
+                              color: rgb(77, 76, 76);
+                              text-shadow: -4px 4px 6px rgb(229, 220, 244); }
+            button:hover    { background-color: #dfdddd; }
+
+            textarea       { z-index: 2;
+                             position: absolute;
+                             top:37%;
+                             left:20%;
+                             background-color: #f9f9f9;
+                             border-style: dashed;}
+            #tema           {z-index: 2;
+                             position: absolute;
+                             width:100%;
+                             padding:5%;
+                             float:left;
+                             top:1%;
+                             background-color: #fbfbfb;}
+            b               {color:#5151b5;}
+
+        </style>
+        <script type = "text/javascript">
+$(document).ready(function(){
+  $('#dodadi').click(function(){
+    var tekst=$('textarea').val();
+    var naslov=$('input').val();
+    if($(this).css("background-color") == " #dfdddd")  $(this).css("border-radius", " #dfdddd");
+    if(tekst && naslov!=''){
+    /*var i,j;
+    for(i=0;i<tekst.lenght;i++){
+        if(tekst[i]=='\n'){
+            for(j=text.lenght+3;j>i;j--){
+                tekst[j]=tekst[j-3];
+            }
+            tekst[i]='<';
+            tekst[i+1]='b';
+            tekst[i+2]='r';
+            tekst[i+3]='>'; //oznaka za nov red vo html
+            tekst.lenght=tekst.lenght+3;
+            i=i+3;
+        }
+    }*/
+    var nov = $("#tema").clone(); //div
+    nov.attr("id","tema1"); //smeni go idto na noviot div
+    $("#glaven").prepend(nov);
+    $("#tema").hide();
+    let hr1=document.createElement("hr");
+    let hr2=document.createElement("hr");
+    let p=document.createElement("p");
+    let p1=document.createElement("p");
+    let b=document.createElement("b");
+    nov.prepend(hr1);//dolna linija
+    nov.prepend(p1); //tekst
+    nov.prepend(p);//naslov
+    nov.css("padding","5%");
+    var d=new Date();
+    var den=d.getDate();
+    var mesec=d.getMonth()+1;
+    var datum=(den<10 ? '0' : '')+den+'/'+(mesec<10 ? '0' : '')+mesec+'/'+ d.getFullYear();
+    nov.prepend(b);
+    b.prepend("Датум:"+datum);
+    nov.prepend(hr2);//gorna linija
+    p.append("Тема: "+naslov); 
+    p1.append(tekst);//vo p1 elementot e tekstot
+    } else if(tekst=='' && naslov=='') alert("Полињата за за текст и наслов се празни, не може да се додаде нова тема. Обидете се повторно.");
+    else if(tekst=='') alert("Полето за текст е празно, не може да се додаде нова тема. Обидете се повторно.");
+    else if(naslov=='') alert("Полето за наслов е празно, не може да се додаде нова тема. Обидете се повторно.");
+   
+  })
+})
+            
+        </script>
+    </head>
+
+    <body>
+    <header>
+            <a href="p11.html">Почетна</a>
+            <a href="omileni_raboti.html">Омилени работи</a>
+            <a href="galerija.html">Галерија</a>
+            <a href="blog.html">Блог</a>
+            <a href="anketa.html">Анкета</a>
+            <a href="kontakt.html">Контакт</a>
+    </header>
+    <p  style="z-index:2; top:15%;font-size: xx-large;color: rgb(77, 76, 76);text-shadow: -4px 4px 6px rgb(229, 220, 244);position: absolute;
+    left: 20%;  font-family:Helvetica, sans-serif;">Здраво,<br>разгледајте и споделете ја вашата омилена тема тука</p>
+    <!--ajde da gi spodelime in-->
+    <img src="blog.jfif" id="pozadina">
+    <label style="top:32%;left:20%;position:absolute;z-index:2;" >Тема:&nbsp;<input type="text" maxlength="100" placeholder="Додади нова тема"></label> 
+   <textarea rows="7" cols="80" name="tekst" form="usrform" style="color:#6e6e6e" placeholder="Додади го текстот тука..."></textarea><br>
+   <button name="submit" id="dodadi" style="top:56%; left:61%;position:absolute; z-index:2;border:1px solid rgb(144, 124, 113)">Додади</button>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="container bg-light"> 
+        
+        
+    </div>
+    <div id="glaven" style="width:75%;top:66%;position:absolute;left:12.5%;background-color:#f7f6f6;float:left">
+        <hr><!--horizontalna linija-->
+        <div id="tema">
+            <b>Датум:26/11/2022</b>
+            <p>Тема: Здравје</p>
+            <p>Витамините се вклучени во многу телесни процеси и извршуваат различни задачи во нашето тело без разлика дали станува збор за коските, 
+                кожата, нервите, внатрешните органи или крвта – на сите нив им требаат витамини за да можат да функционираат правилно и да останат здрави. 
+                Доброто снабдување со одредени хранливи материи го зајакнува имунолошкиот систем и му помага на телото да се одбрани од секакви микроби. 
+                Урамнотежената исхрана, особено таа со многу овошје и зеленчук, е неопходна за ова.<br><br>
+                Витамин А – е важен за метаболизмот, растот, видот и се однесува како заштитно поле против вируси и бактерии. 
+                Се наоѓа во: жолтите и портокаловите овошја како што е мангото, кајсијата или дињата.<br><br>
+                Витамин Б – е всушност група од осум витамини. Сите тие се важни за нашето тело, а меѓу другото и за енергијата на метаболизмот и структурата на имунолошките клетки.
+                Заедно тие помагаат во  намалувањето на заморот и подобрување на работата на мозокот. Се наоѓа во: млеко, ореви, лешници, пченка и др.<br><br>
+                Витамин Ц – важен при заздравување на рани, лузни и одржување на функциите на сврзните ткива. Повеќето овошја и зеленчук содржат витамин Ц.<br><br>
+                Витамин Д – нашиот имунолошки систем треба да контролира повеќе телесни функции. Со помош на УВБ зраците нашето тело може само да произведе витамин Д. Секојдневно сончање од околу 15-тина минути е доволно на лето.
+                Сепак зимно време, треба да се јаде храна богата со витамин Д, како риба, јајца, млечни производи, авокадо и печурки.<br><br>
+                Витамин Е – овој витамин овозможува заштита на клетките при имунолошки реакции(ги намалува воспалителните реакции и помага во спречување на артериска калцификација). 
+                Го има најмногу во растителните масла, пченичните никулци, лененото семе и јатките.<br><br>
+            </p>
+            
+        </div>    
+    </div>
+    
+    
+        
+    </body>

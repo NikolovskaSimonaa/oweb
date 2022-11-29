@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="mk">
+  <head>
+    <meta charset="utf-8">
+    <title>104/2020: Proektna1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body            { font-family:'Times New Roman', Times, serif;}
+        nav            {font-size:medium; 
+                        font-weight:350;
+                        z-index: 2;
+                        top: 3%;
+                        left:65%;
+                        position: absolute;
+                        width: 12%;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        nav a:hover    {background-color:rgb(246, 246, 246); 
+                        text-decoration: none;
+                        color: #858585;}
+                       
+        #profilna      {width:15%;
+                        height:8%;
+                        margin-right: 40px;}
+        a              {text-decoration: none;
+                        color: #858585;
+                        z-index: 3;
+                        display: inline-block;
+                        text-align: center;
+                        padding: 10px 12px;}
+        #text1           {font-size: small;
+                          top:74%;
+                          position: absolute;
+                          left:24%;}
+        #text2           {font-size: small;
+                          top:74%;
+                          position: absolute;
+                          left:43%;}
+        #text3           {font-size: small;
+                          top:74%;
+                          position: absolute;
+                          left:62%;}
+        #text4           {font-size: small;
+                          top:122%;
+                          position: absolute;
+                          left:24%;}
+        #text5           {font-size: small;
+                          top:122%;
+                          position: absolute;
+                          left:43%;}
+        #text6           {font-size: small;
+                          top:122%;
+                          position: absolute;
+                          left:62%;}
+
+
+        #kom1             {position:absolute;
+                           left:23%;
+                           top:75%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden1         {position:absolute;
+                          left:28.5%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+        #kom2             {position:absolute;
+                           left:42%;
+                           top:75%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden2         {position:absolute;
+                          left:47.5%;
+                          top:74%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+        #kom3             {position:absolute;
+                           left:61%;
+                           top:75%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden3         {position:absolute;
+                          left:66.5%;
+                          top:74%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+        #kom4             {position:absolute;
+                           left:23%;
+                           top:122%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden4         {position:absolute;
+                          left:28.5%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+        #kom5             {position:absolute;
+                           left:42%;
+                           top:123%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden5         {position:absolute;
+                          left:47.5%;
+                          top:122%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+        #kom6             {position:absolute;
+                           left:61%;
+                           top:123%;
+                           font-size: small;
+                          color:#858585;}
+        #hidden6         {position:absolute;
+                          left:66.5%;
+                          top:122%;
+                          color:#858585;
+                          margin-top: 2px;
+                          border:1px solid#aaaaaa;
+                          width:10.2%;}
+
+
+        </style>
+        <script type = "text/javascript">
+            
+  
+            //lajkovi
+            var count1=0; var count2=0; var count3=0;
+            var count4=0; var count5=0; var count6=0;
+            function lajkovi1(){
+                count1=count1+1;
+                if(count1==1)document.getElementById("lajk1").innerHTML = "1 like";
+              else document.getElementById("lajk1").innerHTML =count1 +" likes";
+
+            }
+            function lajkovi2(){
+                count2=count2+1;
+                if(count2==1)document.getElementById("lajk2").innerHTML = "1 like";
+              else document.getElementById("lajk2").innerHTML =count2 +" likes";
+
+            }
+            function lajkovi3() {
+              count3=count3+1;
+              if(count3==1)document.getElementById("lajk3").innerHTML = "1 like";
+              else document.getElementById("lajk3").innerHTML =count3 +" likes";
+            }
+            
+            function lajkovi4() {
+              count4=count4+1;
+              if(count4==1)document.getElementById("lajk4").innerHTML = "1 like";
+              else document.getElementById("lajk4").innerHTML =count4 +" likes";
+            }
+            function lajkovi5() {
+              count5=count5+1;
+              if(count5==1)document.getElementById("lajk5").innerHTML = "1 like";
+              else document.getElementById("lajk5").innerHTML =count5 +" likes";
+            }
+            function lajkovi6() {
+              count6=count6+1;
+              if(count6==1)document.getElementById("lajk6").innerHTML = "1 like";
+              else document.getElementById("lajk6").innerHTML =count6 +" likes";
+            }
+            //komentari
+            $(document).ready(function(){
+                $("#lajkovi1").css("margin-top","4px",);
+                $("#lajkovi1").css("margin-bottom","3px",);
+
+                $("#lajkovi2").css("margin-top","4px",);
+                $("#lajkovi2").css("margin-bottom","3px",);
+
+                $("#lajkovi3").css("margin-top","4px",);
+                $("#lajkovi3").css("margin-bottom","3px",);
+
+                $("#lajkovi4").css("margin-top","4px",);
+                $("#lajkovi4").css("margin-bottom","3px",);
+
+                $("#lajkovi5").css("margin-top","4px",);
+                $("#lajkovi5").css("margin-bottom","3px",);
+
+                $("#lajkovi6").css("margin-top","4px",);
+                $("#lajkovi6").css("margin-bottom","3px",);
+
+                $("#hidden1").hide();
+                $("#kom1").hide();
+
+                $("#hidden2").hide();
+                $("#kom2").hide();
+            
+                $("#hidden3").hide();
+                $("#kom3").hide();
+
+                $("#hidden4").hide();
+                $("#kom4").hide();
+
+                $("#hidden5").hide();
+                $("#kom5").hide();
+
+                $("#hidden6").hide();
+                $("#kom6").hide();
+
+            
+            $("#send1").click(function(){
+                var komentar1=$('#text1').val();
+                if(komentar1!=''){
+                    $("#hidden1").show();
+                    $("#hidden1").append(komentar1);
+                    $("#kom1").show();
+                    $("#text1").remove();
+                    $("#send1").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+
+            $("#send2").click(function(){
+                var komentar2=$('#text2').val();
+                if(komentar2!=''){
+                    $("#hidden2").show();
+                    $("#hidden2").append(komentar2);
+                    $("#kom2").show();
+                    $("#text2").remove();
+                    $("#send2").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+
+            $("#send3").click(function(){
+                var komentar3=$('#text3').val();
+                if(komentar3!=''){
+                    $("#hidden3").show();
+                    $("#hidden3").append(komentar3);
+                    $("#kom3").show();
+                    $("#text3").remove();
+                    $("#send3").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+
+            $("#send4").click(function(){
+                var komentar4=$('#text4').val();
+                if(komentar4!=''){
+                    $("#hidden4").show();
+                    $("#hidden4").append(komentar4);
+                    $("#kom4").show();
+                    $("#text4").remove();
+                    $("#send4").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+            $("#send5").click(function(){
+                var komentar5=$('#text5').val();
+                if(komentar5!=''){
+                    $("#hidden5").show();
+                    $("#hidden5").append(komentar5);
+                    $("#kom5").show();
+                    $("#text5").remove();
+                    $("#send5").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+            $("#send6").click(function(){
+                var komentar6=$('#text6').val();
+                if(komentar6!=''){
+                    $("#hidden6").show();
+                    $("#hidden6").append(komentar6);
+                    $("#kom6").show();
+                    $("#text6").remove();
+                    $("#send6").remove();
+                }else alert("Полето за коментар не е пополнето.");
+            })
+        })
+        </script>
+    </head>
+
+    <body>
+            <div class="container pl-5 pr-5">
+            <div class="container pl-5 pr-5">
+            <div class="container pl-5 pr-5 border">
+                <nav>
+                    <a href="p11.html">Врати се на почетна</a>
+                </nav>
+                <br>
+                <h3 style="color: #a3a3a3"><img class="rounded-circle" id="profilna" src="profile.jpg"  alt="profile_picture"> nikolovska.simona</h3>            
+                <hr><p style="text-align:center">Posts</p><hr>
+                <div> <!--- redica1--->
+                    <div class="w3-card-4 border" style="width:30%; margin-left:1%;margin-right:4%;float:left;">
+                        <img src="jas1.jpg" alt="slika1" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi1()" style="height:5% ;width:2.5%;left:24%;position: absolute; top: 68%">
+                            <div id=lajk1 style="position:absolute; top:69%; left:27%" >Like</div>
+                            <br><br>
+                            <input type="text" id="text1" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send1" style="top:74%;left:35.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                            <div id="kom1">Your comment:</div>
+                            <div id="hidden1"></div><br>
+                            <p></p> 
+                        </div>
+                    </div>
+                    <div class="w3-card-4 border" style="width:30%; float:left">
+                        <img src="jas2.jpg" alt="slika2" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi2()" style="height:5% ;width:2.5%;left:43%;position: absolute; top: 68%">
+                            <div id=lajk2 style="position:absolute; top:69%; left:46%" >Like</div>
+                            <br><br>
+                            <input type="text" id="text2" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send2" style="top:74%;left:54.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                            <div id="kom2">Your comment:</div>
+                            <div id="hidden2"></div><br>
+                            <p></p>
+                            
+                            
+                        </div>
+                    </div>
+        
+                    <div class="w3-card-4 border" style="width:30%; margin-left:4%; float:left">
+                        <img src="jas3.jpg" alt="slika3" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi3()" style="height:5% ;width:2.5%;left:62%;position: absolute; top: 68.4%">
+                            <div id=lajk3 style="position:absolute; top:69.2%; left:65%" >Like</div>
+                            <br><br>
+                            <input type="text" id="text3" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send3" style="top:74%;left:73.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                            <div id="kom3">Your comment:</div>
+                            <div id="hidden3"></div><br>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div> <!--- redica2--->
+                    <div class="w3-card-4 border" style="width:30%; margin-left:1%;margin-right:4%;float:left">
+                        <img src="jas4.jpg" alt="slika4" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi4()" style="height:5% ;width:2.5%;left:24%;position: absolute; top: 115.4%">
+                            <div id=lajk4 style="position:absolute; top:116.2%; left:27%" >Like</div>
+                            <br><br>
+                           <input type="text" id="text4" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send4" style="top:122%;left:35.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                           <div id="kom4">Your comment:</div>
+                            <div id="hidden4"></div><br>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="w3-card-4 border" style="width:30%; float:left">
+                        <img src="jas5.jpg" alt="slika5" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi5()" style="height:5% ;width:2.5%;left:43%;position: absolute; top: 115.4%">
+                            <div id=lajk5 style="position:absolute; top:116.2%; left:46%" >Like</div>
+                            <br><br>
+                            <input type="text" id="text5" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send5" style="top:122%;left:54.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                            <div id="kom5">Your comment:</div>
+                            <div id="hidden5"></div><br>
+                            <p></p>
+                        </div>
+                    </div>    
+                    <div class="w3-card-4 border" style="width:30%; margin-left:4%; float:left">
+                        <img src="jas6.jpg" alt="slika6" style="width:100%">
+                        <div class="w3-container" style="text-align:center;">
+                            <img src="like.png" onclick="lajkovi6()" style="height:5% ;width:2.5%;left:62%;position: absolute; top: 115.6%">
+                            <div id=lajk6 style="position:absolute; top:116.4%; left:65%" >Like</div>
+                            <br><br>
+                            <input type="text" id="text6" placeholder="Add a comment..." maxlength="20">
+                            <button name="submit" id="send6" style="top:122%;left:73.5%;position:absolute; z-index:2;border:1px solid rgb(136, 136, 136)">Send</button>
+                            <div id="kom6">Your comment:</div>
+                            <div id="hidden6"></div><br>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            </div>
+            </div>
+    </body>
+</html>
