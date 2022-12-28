@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Domasna4: 104/2020</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <style>
+        body { font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+        table { color:#6f6f6f;
+                border-collapse: collapse;
+                width: 100%;
+                border:3px solid #d5d5d5;
+               }
+
+        td, th { border: 1px solid #dddddd;
+                 text-align: left;
+                 padding: 8px;
+                 }
+
+        tr:nth-child(even) { background-color: #dfdfdf; }
+        tr:nth-child(odd) { background-color: #fdfdfd; }
+       
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("input").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#tabela tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+             });
+            });
+            });
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+    <br><br><br>
+    <h1 style="font-family: cursive; color: #6f6f6f; left:25%; position: absolute;">Македонско-Англиски речник за овошја</h1>
+    <br><br><br><br>
+    <p style="display:flex;justify-content:center"><input type="text" placeholder="Пребарај...">&nbsp; &nbsp; (Внесете овошје за полесно да го најдете преводот.)</p>
+
+    <br><br>
+    <table>
+      <thead>
+      <tr>
+        <th>Македонски јазик</th>
+        <th>Англиски јазик</th>
+      </tr>
+      </thead>
+      <tbody id="tabela">
+      <tr>
+        <td>ананас</td>
+        <td>pineapple</td>
+
+      </tr>
+      <tr>
+        <td>портокал</td>
+        <td>orange</td>
+
+      </tr>
+      <tr>
+        <td>јаболко</td>
+        <td>apple</td>
+      </tr>
+      <tr>
+        <td>цреша</td>
+        <td>cherry</td>
+      </tr>
+      <tr>
+        <td>боровинка</td>
+        <td>blueberry</td>
+      </tr>
+      <tr>
+        <td>лимон</td>
+        <td>lemon</td>
+      </tr>
+      <tr>
+        <td>круша</td>
+        <td>pear</td>
+      </tr>
+      <tr>
+        <td>грозје</td>
+        <td>grapes</td>
+      </tr>
+      <tr>
+        <td>јагода</td>
+        <td>strawberry</td>
+      </tr>
+      <tr>
+        <td>малина</td>
+        <td>raspberry</td>
+      </tr>
+      <tr>
+        <td>лубеница</td>
+        <td>watermelon</td>
+      </tr>
+      <tr>
+        <td>манго</td>
+        <td>mango</td>
+      </tr>
+      <tr>
+        <td>кокос</td>
+        <td>coconut</td>
+      </tr>
+      <tr>
+        <td>капинка</td>
+        <td>blackberry</td>
+      </tr>
+      <tr>
+        <td>слива</td>
+        <td>plum</td>
+      </tr>
+      <tr>
+        <td>смоква</td>
+        <td>fig</td>
+      </tr>
+      <tr>
+        <td>киви</td>
+        <td>kiwi</td>
+      </tr>
+      <tr>
+        <td>маслинка</td>
+        <td>olive</td>
+      </tr>
+      <tr>
+        <td>тиква</td>
+        <td>pumpkin</td>
+      </tr>
+      <tr>
+        <td>праска</td>
+        <td>peach</td>
+      </tr>
+      <tr>
+        <td>кајсија</td>
+        <td>apricot</td>
+      </tr>
+      <tr>
+        <td>цитрон</td>
+        <td>citrus</td>
+      </tr>
+      <tr>
+        <td>диња</td>
+        <td>melon</td>
+      </tr>
+      </tbody>
+    </table>
+    <br>
+    </div>
+    <div style="display:flex;justify-content:center"><img src="ovosja.jpg"></div>
+</body>
+</html>
